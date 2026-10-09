@@ -1,0 +1,271 @@
+/*1. CONFIGURACIÓN GENERAL*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0759df;
+    color: #222b45;
+}
+
+/*2. ESTRUCTURA CON GRID*/
+
+.contenedor-login {
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px 30px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+
+    background-color: #0759df;
+}
+
+/*3. PANEL AZUL*/
+
+.panel-azul {
+    background-color: #0759df;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+.panel-azul h1 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/*4. PANEL BLANCO*/
+
+.panel-formulario {
+    background-color: #f8f8f8;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+}
+
+.formulario {
+    width: 100%;
+    max-width: 350px;
+}
+
+/*5. ENCABEZADO*/
+
+.encabezado {
+    margin-bottom: 35px;
+}
+
+.encabezado h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.encabezado h2 strong {
+    font-weight: 700;
+}
+
+.encabezado p {
+    font-size: 10px;
+    line-height: 1.6;
+    color: #8b90a0;
+}
+
+/*6. CAMPOS DEL FORMULARIO*/
+
+.campo {
+    margin-bottom: 15px;
+}
+
+.campo label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    margin: 0 0 5px 10px;
+}
+
+.entrada {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    width: 100%;
+    min-height: 42px;
+    padding: 0 12px;
+
+    background-color: white;
+    border: 1px solid #f0f0f0;
+    border-radius: 10px;
+}
+
+.entrada span {
+    color: #596579;
+    font-size: 14px;
+}
+
+.entrada input {
+    width: 100%;
+    min-width: 0;
+
+    border: none;
+    outline: none;
+    background: transparent;
+
+    font-size: 11px;
+    color: #222b45;
+}
+
+.entrada input::placeholder {
+    color: #a7acb7;
+}
+
+/*Resalta el campo seleccionado*/
+
+.entrada:focus-within {
+    border-color: #0759df;
+    box-shadow: 0 0 0 2px rgba(7, 89, 223, 0.10);
+}
+
+/*7. ENLACE DE CONTRASEÑA*/
+
+.enlace-password {
+    text-align: right;
+    margin: -3px 0 30px;
+}
+
+a {
+    color: #0759df;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/*8. BOTÓN DE LOGIN*/
+
+.boton-login {
+    width: 100%;
+    min-height: 43px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: #0759df;
+    color: white;
+
+    font-size: 12px;
+    cursor: pointer;
+
+    transition: background-color 0.2s;
+}
+
+.boton-login:hover {
+    background-color: #0648b5;
+}
+
+/*9. REGISTRO*/
+
+.registro {
+    text-align: center;
+    margin-top: 28px;
+
+    font-size: 10px;
+    color: #8b90a0;
+}
+
+/*10. TABLETAS*/
+
+@media screen and (max-width: 900px) {
+
+    .contenedor-login {
+        grid-template-columns: 0.8fr 1.2fr;
+        padding: 10px;
+    }
+
+    .panel-formulario {
+        padding: 30px;
+    }
+
+    .panel-azul h1 {
+        font-size: 24px;
+    }
+
+}
+
+/*11. CELULARES*/
+
+@media screen and (max-width: 600px) {
+
+    body {
+        background-color: #f8f8f8;
+    }
+
+    .contenedor-login {
+        grid-template-columns: 1fr;
+        padding: 0;
+        min-height: 100vh;
+    }
+
+    .panel-azul {
+        display: none;
+    }
+
+    .panel-formulario {
+        min-height: 100vh;
+        padding: 30px 25px;
+        align-items: flex-start;
+    }
+
+    .formulario {
+        max-width: 100%;
+        padding-top: 35px;
+    }
+
+    .encabezado {
+        margin-bottom: 30px;
+    }
+
+    .encabezado h2 {
+        font-size: 18px;
+    }
+
+    .encabezado p {
+        font-size: 11px;
+    }
+
+    .entrada {
+        min-height: 45px;
+    }
+
+    .entrada input {
+        font-size: 12px;
+    }
+
+    .campo label {
+        font-size: 11px;
+    }
+
+    .boton-login {
+        min-height: 44px;
+    }
+
+    .salto-escritorio {
+        display: none;
+    }
+
+}
