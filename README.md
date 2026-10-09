@@ -74,4 +74,5 @@ Este proyecto corresponde únicamente a la interfaz visual del inicio de sesión
 ---
 
 **Materia:** Ingeniería Web
+
 **Institución:** Universidad de las Américas (UDLA)
